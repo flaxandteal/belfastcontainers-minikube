@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/real-world.css">
+		<link rel="stylesheet" href="css/theme/fat.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image='images/first.png' data-background-color='#fff' data-background-size='cover'></section>
+				<section>
+				    <section data-background-image='images/Love_Actually_movie.jpg' data-background-size='contain' data-background-color='#000'></section>
+				    <section data-background-video='images/love-actually.webm'></section>
+				    <section data-background-image='images/la_interconnections.jpg' data-background-size='contain' data-background-color='#000'></section>
+				    <section data-background-image='images/landscape2.png'>
+				      <h1>Containers, Actually</h1>
+				      <ul>
+					<li>Gruff old fool, Rough diamond caterer</li><aside class="notes">If Alan Rickman got knocked down by a bus, pleading at Ian McKellen's door</aside>
+					<li class="fragment">Harry / Alan Rickman<br/>Natalie / Martine McCutcheon</li>
+					<li class="fragment">Script (docker-compose.yml or Kubernetes definitions)</li>
+					<li class="fragment">Studio (Kubernetes)</li>
+				      </ul>
+				    <aside class="notes">
+					some services discovered faster than others
+					    <ul>
+						    <li>Scalability</li>
+						    <li>Reproducibility</li>
+						    <li>Service discovery</li>
+						    <li>Deployment</li>
+					    </ul>
+				    </aside>
+				    </section>
+				</section>
+				<section data-background-image='images/landscape2.png'>
+					<img src='images/architecture.png' />
+				</section>
+				<section data-background-image='images/landscape2.png'>
+					<img src='images/dark-arts.jpg'/>
+				</section>
+				<section data-background-video='images/illustrated.webm'></section>
+				<section data-background-image='images/childrens-guide.png' data-background-size='contain'>
+				</section>
+				<section>
+					<img height=500px src='images/what-here.gif'/>
+				<aside class="notes">
+					<ul>
+						<li>Moving between cloud providers</li>
+						<li>Push-to-deploy for devs</li>
+						<li>Cost effective infrastructure</li>
+						<li>Somebody-else maintainable</li>
+					</ul>
+				</aside>
+				</section>
+				<section data-background-image='images/landscape.png'>
+					<h1>Kubernetes</h1>
+					<ul class="fragment">
+						<li class="fragment">Each thing has it's own YAML definition</li>
+						<li class="fragment">Local, AWS, GCE, Azure, yadayadaya</li>
+						<li class="fragment">You can control any cluster from <code>kubectl</code></li>
+						<li class="fragment">Whole config is versionable (redspread/spread)</li>
+						<li class="fragment">Physical machines no longer an app-facing concern</li>
+					</ul>
+				</section>
+				<section data-background-image='images/landscape.png'>
+					<h1>Gruber-netes</h1>
+					<img height=300px src='images/Hans_Gruber.png' />
+					<ul>
+						<li class="fragment">But you've developed a massive headache<br/>and can't find a YAML file for alka seltzer</li>
+					</ul>
+					<aside class="notes">And I'm lying on 5 points - no changes; physical machines; versionable</aside>
+				</section>
+				<section data-background-image='images/landscape2.png' data-transition='fade'>
+					<img height=100% width=100% src='images/larakube-1.png' style='background-color: #fff'/>
+				</section>
+				<section data-background-image='images/landscape2.png' data-transition='fade'>
+					<img height=100% width=100% src='images/larakube-2.png' style='background-color: #fff' />
+				</section>
+				<section data-background-image='images/landscape2.png' data-transition='fade'>
+					<img height=100% width=100% src='images/larakube-3.png' style='background-color: #fff' />
+				</section>
+				<section>
+					<h1>Minikube</h1>
+					<img src='images/minikube.png'/>
+				</section>
+				<section data-background-image='images/landscape2.png'>
+					<h1>Nginx?</h1>
+					<pre><code data-trim data-noescape>
+POD
+metadata:
+    labels:
+        service: nginx
+containers:
+-   image: myrepo/nginx
+    name: nginx
+    ports:
+    - containerPort: 443
+      protocol: TCP
+					</code></pre>
+					<pre><code data-trim data-noescape>
+SERVICE
+spec:
+    ports:
+    - port: 443
+      targetPort: 443
+      protocol: TCP
+    selector:
+      service: nginx
+					</code></pre>
+				</section>
+				<section data-background-image='images/landscape.png'>
+					<h1>Deployable</h1>
+					<pre><code data-trim data-noescape>
+DEPLOYMENT
+spec:
+    replicas: 1
+    template:
+        [POD YAML]
+					</code></pre>
+					<pre><code data-trim data-noescape>
+SERVICE
+spec:
+    ports:
+    - port: 443
+      targetPort: 443
+      protocol: TCP
+    selector:
+      service: nginx
+					</code></pre>
+					<aside class="notes">Load balancer...</aside>
+				</section>
+				<section>
+					<section data-background-image='images/landscape2.png' data-background-color='#fff'>
+						<h1>Am-Tips</h1>
+						<ul>
+							<li>kube-aws is cool, but assumes you're loaded</li>
+							<li class="fragment">GCE gives you a $300 starter, and only now have I remembered to cancel it</li>
+							<li class="fragment">Minikube is actually free, but CI to your laptop isn't very useful long-term</li>
+						</ul>
+						<img height=50% width=40% src='images/gene-meme.jpg'/>
+						<img class='fragment' height=50% width=40% src='images/load-balancer.jpg'/>
+					</section>
+					<aside class="notes"> (also... ECR)</aside>
+					<section data-background-image='images/landscape.png'>
+						<h1>Other stuff</h1>
+						<ul>
+							<li class="fragment">Secrets</li>
+							<li class="fragment">Backups</li>
+							<li class="fragment">Testing</li>
+							<li class="fragment">Automated Deployment</li>
+						</ul>
+						<h2 class="fragment blink third-degree"><span class='perfect'>&amp; &#10024;Gitlab CI&#10024;</span></h2>
+					</section>
+				</section>
+				<section>
+				    <section data-background-image='images/landscape2.png'>
+				      <h1>Demos</h1>
+				    </section>
+				    <section>
+				      <h1>Rocket</h1>
+				    </section>
+				    <section>
+				      <h1>Helm</h1>
+				    </section>
+				    <section>
+				      <h1>PHP</h1>
+				    </section>
+				</section>
+				<section data-background-image='images/landscape2.png'>
+					<h1>Questions</h1>
+					<h3>should be directed to Reddit</h3>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				backgroundTransition: 'slide',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

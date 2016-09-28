@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="640"
+   height="360"
+   viewBox="0 0 640.00001 360.00001"
+   id="svg4780"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="containerization.svg"
+   inkscape:export-filename="/home/phil/Work/Flax &amp; Teal/Sync/Talks/BelfastContainers/reveal.js-3.3.0/images/containerization.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4782">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5382"
+       x="-0.0097323917"
+       width="1.0194648"
+       y="-0.11959655"
+       height="1.2391931">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.7719492"
+         id="feGaussianBlur5384" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="283.09822"
+     inkscape:cy="370.76891"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="704"
+     inkscape:window-x="1680"
+     inkscape:window-y="309"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4785">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-692.36216)">
+    <rect
+       style="opacity:0.25100002;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5405"
+       width="644.28571"
+       height="362.85715"
+       x="-1.4285715"
+       y="690.93359" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:41.58892822px;line-height:125%;font-family:'League Spartan';-inkscape-font-specification:'League Spartan, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5382)"
+       x="100.56283"
+       y="883.23187"
+       id="text5328-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5330-5"
+         x="100.56283"
+         y="883.23187">CONTAINERIZATION</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:41.58892822px;line-height:125%;font-family:'League Spartan';-inkscape-font-specification:'League Spartan, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="101.11585"
+       y="883.01538"
+       id="text5328"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5330"
+         x="101.11585"
+         y="883.01538">CONTAINERIZATION</tspan></text>
+  </g>
+</svg>
